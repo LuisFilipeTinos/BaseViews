@@ -1,12 +1,12 @@
 CREATE TABLE clientes (
-    id_cliente INT PRIMARY KEY,
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
     cidade VARCHAR(100),
     regiao VARCHAR(50)
 );
 
 CREATE TABLE pedidos (
-    id_pedido INT PRIMARY KEY,
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_cliente INT,
     data_pedido DATE,
     valor_total DECIMAL(10,2),
@@ -14,7 +14,7 @@ CREATE TABLE pedidos (
 );
 
 CREATE TABLE itens_pedido (
-    id_item INT PRIMARY KEY,
+    id_item INT AUTO_INCREMENT PRIMARY KEY,
     id_pedido INT,
     produto VARCHAR(100),
     quantidade INT,
